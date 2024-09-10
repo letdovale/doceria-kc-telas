@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box; /* Garante que padding e bordas sejam incluídos no cálculo de width e height */
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F5F5F5;
+}
+
+img {
+    width: 150px;
+    padding-block: 2rem;
+}
+
+.menuLateral {
+    position: fixed;
+    width: 250px; /* Largura da barra lateral */
+    height: 100%;
+    background-image: url('./Barra\ lateral.png');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menuLateral::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.menuLateral ul {
+    padding-block: 2rem;
+    width: 100%;
+}
+
+.menuLateral li {
+    list-style: none;
+    width: 100%;
+   
+}
+
+.links ul li:first-child a {
+    color: #F2D78C;
+    font-weight: 600;
+}
+
+.menuLateral li:hover a {
+    color: #F2D78C;
+    font-weight: 600;
+}
+
+.menuLateral ul li a {
+    display: block;
+    width: 100%;
+    padding-block: 1rem;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+p {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.mainCorpo {
+    margin-left: 250px; 
+    padding: 1.5rem;
+    width: calc(100% - 250px); 
+    min-height: 100vh;
+}
+
+.Titulo p {
+    font-size: 24px;
+    color: #454545;
+    padding-block: 2rem;
+    margin-left: 2rem;   
+}
+
+.containerPedidos {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.containerPedidos ul {
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
+}
+
+.containerPedidos li a {
+    text-decoration: none;
+    color: #454545;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.containerPedidos li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 85px; 
+    width: 300px; 
+    background-color: #ffff; 
+    border-radius: 8px; 
+    padding: 1rem; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.containerPedidos li a:hover {
+    text-decoration-line: underline;
+}
+
+.fundoBag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2D78C;
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    margin-right: 1rem; 
+    font-size: 24px; 
+    color: #fff; 
+}
+
+
+.containerBrigadeiros {
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+
+.containerBrigadeiros h2 {
+    font-size: 18px;
+    color: #454545;
+    margin-bottom: 1.5rem;
+}
+
+.brigadeirosLista {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 0.5rem;
+}
+
+.brigadeiroItem {
+    flex: 1 1 calc(33.333% - 1rem); 
+    background-color: #fff;
+    border-radius: 8px;
+    padding-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 1rem; 
+}
+
+.brigadeiroItem img {
+    width: 140px;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+
+.descricao-brigadeiro {
+    display: flex;
+    flex-direction: column;
+}
+
+.descricaoBrigadeiro h3 {
+    font-size: 14px;
+    color: #333333;
+    margin: 0;
+}
+
+.descricaoBrigadeiro span {
+    font-size: 15px;
+    color: #EBB623;
+    font-weight: bold;
+}
